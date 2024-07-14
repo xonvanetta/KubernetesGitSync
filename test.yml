@@ -1,0 +1,83 @@
+apiVersion: v1
+data:
+    test: ENC[AES256_GCM,data:1D0+MxyRJdg=,iv:8vW95wp0AKN6IFSH858KuM4mescbuHWd/2oAMhZdsHg=,tag:eAoDX4C4FJbXSaxfKmrCdQ==,type:str]
+kind: Secret
+metadata:
+    annotations:
+        kubectl.kubernetes.io/last-applied-configuration: |
+            {"apiVersion":"v1","kind":"Secret","metadata":{"annotations":{"kubernetes-git-sync/enabled":"true","kubernetes-git-sync/git-branch":"test","kubernetes-git-sync/git-clone-options":"{\"URL\":\"git@github.com:xonvanetta/kubernetes-git-sync.git\"}","kubernetes-git-sync/git-filepath":"test.yml"},"creationTimestamp":"2024-07-27T21:17:15Z","managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:type":{}},"manager":"kubectl-create","operation":"Update","time":"2024-07-27T21:17:15Z"},{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubernetes-git-sync/enabled":{},"f:kubernetes-git-sync/git-branch":{},"f:kubernetes-git-sync/git-clone-options":{},"f:kubernetes-git-sync/git-filepath":{}}}},"manager":"kubectl-annotate","operation":"Update","time":"2024-07-28T19:03:00Z"}],"name":"test","namespace":"default","resourceVersion":"187173","uid":"a17dad69-7078-480d-950d-d84c263f6b98"},"type":"Opaque"}
+        kubernetes-git-sync/enabled: "true"
+        kubernetes-git-sync/git-filepath: test.yml
+        kubernetes-git-sync/git-secret: kube-system/kubernetes-git-sync
+        kubernetes-git-sync/git-url: git@github.com:xonvanetta/kubernetes-git-sync.git
+        kubernetes-git-sync/sops-age-recipients: age1y4hfh6duxd6xv32k7rx0nf2majvp2yywlwsemzl28z6y59pju56swcsctg
+        lazy: "no"
+    creationTimestamp: "2024-07-27T21:17:15Z"
+    managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:type: {}
+          manager: kubectl-create
+          operation: Update
+          time: "2024-07-27T21:17:15Z"
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    f:kubectl.kubernetes.io/last-applied-configuration: {}
+          manager: kubectl-client-side-apply
+          operation: Update
+          time: "2024-07-28T19:07:25Z"
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+                f:annotations:
+                    .: {}
+                    f:kubernetes-git-sync/enabled: {}
+                    f:kubernetes-git-sync/git-filepath: {}
+                    f:kubernetes-git-sync/git-secret: {}
+          manager: kubectl-annotate
+          operation: Update
+          time: "2024-07-29T00:43:56Z"
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:data:
+                .: {}
+                f:test: {}
+            f:metadata:
+                f:annotations:
+                    f:kubernetes-git-sync/git-url: {}
+                    f:kubernetes-git-sync/sops-age-recipients: {}
+                    f:lazy: {}
+          manager: kubectl-edit
+          operation: Update
+          time: "2024-08-03T22:34:36Z"
+    name: test
+    namespace: default
+    resourceVersion: "790811"
+    uid: a17dad69-7078-480d-950d-d84c263f6b98
+type: Opaque
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1y4hfh6duxd6xv32k7rx0nf2majvp2yywlwsemzl28z6y59pju56swcsctg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSArTUpwSzR4VmNmekVyNFQw
+            aGZUa0tWUFB6R2NveW9VbituR20yT1ZlZlZJCjMvSnAwWWs0TThveEdRQXlXMWQv
+            VGFVaENROGVidytGTXN2Z3JoeGlzd0UKLS0tIG9aVzNkZnUrd2twVmhERU1XSHVB
+            cnN1YW5uNitya2J1RGNLaXhLQlBCenMKJOVdDRkHL8Ow5GFxMpKNSt2P1kr7nebI
+            6XortLAuqj9+G0LkuIEnn5JiXBVmbOpzXf3y//hXWg5jN+AkU1QGFw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-03T22:43:26Z"
+    mac: ENC[AES256_GCM,data:CKz3PwLJLCXZ8a8Rrr5TzXxC5Yv1ITSaHcj/gWtNWByS5P5SbCKBlRSs7YO1zxElQUIVmoidPSaCrl+jbaGF49by/QiRcCM2aVRNLEKxFyFGd1/PPGeGp75f9eTQP8P/Gr4hvI9wTa5TlN+4r3yI8Hf/jIzVomclbHdR1HjGnT8=,iv:luf6FxQO/dlzzj+ogGf4EXlVYlXdKJVMb3Lw0N1lHnI=,tag:GL9XyB5ecacQnLxKoJQ2wg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.9.0
