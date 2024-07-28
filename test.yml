@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  annotations:
+    kubernetes-git-sync/enabled: "true"
+    kubernetes-git-sync/git-branch: test
+    kubernetes-git-sync/git-clone-options: '{"URL":"git@github.com:xonvanetta/kubernetes-git-sync.git"}'
+    kubernetes-git-sync/git-filepath: test.yml
+  creationTimestamp: "2024-07-27T21:17:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:type: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2024-07-27T21:17:15Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes-git-sync/enabled: {}
+          f:kubernetes-git-sync/git-branch: {}
+          f:kubernetes-git-sync/git-clone-options: {}
+          f:kubernetes-git-sync/git-filepath: {}
+    manager: kubectl-annotate
+    operation: Update
+    time: "2024-07-28T19:03:00Z"
+  name: test
+  namespace: default
+  resourceVersion: "187173"
+  uid: a17dad69-7078-480d-950d-d84c263f6b98
+type: Opaque
