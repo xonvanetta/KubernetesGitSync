@@ -19,6 +19,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 )
 
+//Todo better name for this package
+
 type controller struct {
 	client client.Client
 }
